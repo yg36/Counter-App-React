@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* Light Theme */
+.app.light {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Dark Theme */
+.app.dark {
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+}
+
+.counter-card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 30px 40px;
+  width: 340px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Theme variables */
+.app.light .counter-card {
+  --card-bg: #ffffff;
+  --text-color: #333;
+}
+
+.app.dark .counter-card {
+  --card-bg: #2b2b2b;
+  --text-color: #f1f1f1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.count {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+  color: #764ba2;
+}
+
+.app.dark .count {
+  color: #a5b4fc;
+}
+
+.step-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.step-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #e0e0e0;
+}
+
+.step-btn.active {
+  background: #764ba2;
+  color: white;
+}
+
+.app.dark .step-btn {
+  background: #444;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.increase {
+  background: #4caf50;
+}
+
+.decrease {
+  background: #f44336;
+}
+
+.reset {
+  background: #607d8b;
+}
